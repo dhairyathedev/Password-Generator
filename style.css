@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: #212224;
@@ -12,7 +14,7 @@ body{
 .main{
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -29,8 +31,25 @@ body{
     -ms-transition: 0.70s;
     -o-transition: 0.70s;
 }
+.sub-title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+.info{
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.info li{
+    line-height: 1.8em;
+}
 @media only screen and (max-width: 600px) {
     #password {
         letter-spacing: 0.3rem;
+        font-size: 25px;
+    }
+    .info li{
+        letter-spacing: 0;
     }
   }

@@ -6,8 +6,8 @@ const strengthElem = document.getElementById('strength')
 
 function randomPassword() {
   let result = '';
-    let length = 8
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let length = 12
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+*-/!@#$%^&*()_-?/><.,';
     let charactersLength = characters.length;
     for ( let i = 0; i < length; i++ ) {
        result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -68,19 +68,19 @@ function passwordStrength(password) {
   if (password.match(/[^a-zA-Z0-9]/)) {
       strength += 1
   }
-    if (strength === 1) {
-      strengthElem.innerHTML = 'Weak Password'
+    if (strength <= 1) {
+      strengthElem.innerHTML = ' ❌ Weak Password'
       strengthElem.style.color = 'red'
       console.log('week');
   }
-  if (strength === 2) {
-    strengthElem.innerHTML = 'Good Password'
+  if (strength >= 2) {
+    strengthElem.innerHTML = '⚠️ Good Password'
     strengthElem.style.color = '#DBA419'
 
       console.log('GOod');
   }
-  if (strength === 3) {
-      strengthElem.innerHTML = 'Strong Password'
+  if (strength > 3) {
+      strengthElem.innerHTML = ' ✅ Strong Password'
       strengthElem.style.color = '#11A927'
       console.log('strong');
   }
