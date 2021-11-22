@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+.main{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.content{
+    display: flex;
+}
+#password{
+    width: 600px;
+    letter-spacing: 0.5rem;
+}
+.greenBtn{
+    background-color: #2C974B;
+    color: #fff;
+    margin-left: 5px;
+}
+.greenBtn:hover{
+    background-color: #2C974B;
+    color: #fff;
+    width: 100px;
+}
+.sub-title{
+    color: #2C974B;
+    font-weight: 900;
+    font-size: 35px;
+}
