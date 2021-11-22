@@ -1,3 +1,4 @@
+import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard';
 const elem = document.getElementById('password')
 
 function randomPassword() {
@@ -9,6 +10,7 @@ function randomPassword() {
        result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     elem.value = result;
+    copyTextToClipboard(result)
   }
 
 document.body.addEventListener('keyup', (event)=>{
@@ -18,4 +20,5 @@ document.body.addEventListener('keyup', (event)=>{
       }
       
 })
+document.getElementById('generate').addEventListener('click', randomPassword)
 randomPassword()
