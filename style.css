@@ -9,12 +9,14 @@ body{
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
 }
-#password{
+.main{
     position: absolute;
     left: 50%;
     top: 45%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+#password{
     font-size: 50px;
     letter-spacing: 1rem;
     cursor: pointer;

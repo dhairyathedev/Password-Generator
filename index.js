@@ -2,6 +2,7 @@ import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard';
 
 const elem = document.getElementById('password')
+const strengthElem = document.getElementById('strength')
 
 function randomPassword() {
   let result = '';
@@ -68,12 +69,19 @@ function passwordStrength(password) {
       strength += 1
   }
     if (strength === 1) {
+      strengthElem.innerHTML = 'Weak Password'
+      strengthElem.style.color = 'red'
       console.log('week');
   }
   if (strength === 2) {
+    strengthElem.innerHTML = 'Good Password'
+    strengthElem.style.color = '#DBA419'
+
       console.log('GOod');
   }
   if (strength === 3) {
+      strengthElem.innerHTML = 'Strong Password'
+      strengthElem.style.color = '#11A927'
       console.log('strong');
   }
 }
