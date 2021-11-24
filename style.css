@@ -56,9 +56,12 @@ body{
 .footer a{
     text-decoration: none;
 }
+.content{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     #password {
-        letter-spacing: 0.3rem;
+        /* letter-spacing: 0.3rem; */
         font-size: 25px;
     }
     .info li{
@@ -68,5 +71,11 @@ body{
         text-align: left;
         font-size: 12px;
         margin-top: 30px;
+    }
+    .sub-title{
+        font-size: 18px;
+    }
+    .info{
+        font-size: 14px;
     }
   }

@@ -2,6 +2,7 @@ import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard';
 
 const elem = document.getElementById('password')
+const copyCheck = document.getElementById('copyCheck')
 const strengthElem = document.getElementById('strength')
 
 function randomPassword() {
@@ -13,9 +14,15 @@ function randomPassword() {
        result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     elem.innerText = result;
+    if(!copyCheck.checked){
+      console.log('Copy disabled');
+      confetti();
+      passwordStrength(result);
+    }else{
     copyTextToClipboard(result);
     confetti();
     passwordStrength(result);
+    }
   }
 
 document.body.addEventListener('keyup', (event)=>{
