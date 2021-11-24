@@ -11,6 +11,9 @@ body{
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
 }
+.title{
+    user-select: none;
+}
 .main{
     position: absolute;
     left: 50%;

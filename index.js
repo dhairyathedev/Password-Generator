@@ -3,7 +3,6 @@ import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard'
 
 const elem = document.getElementById('password')
 const copyCheck = document.getElementById('copyCheck')
-const confettiCheck = document.getElementById('confettiCheck')
 const strengthElem = document.getElementById('strength')
 
 function randomPassword() {
@@ -34,7 +33,7 @@ document.body.addEventListener('keyup', (event)=>{
       
 })
 elem.addEventListener('click', randomPassword)
-randomPassword()
+
 
 
 // Dark Light Toggle
