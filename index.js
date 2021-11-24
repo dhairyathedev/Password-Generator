@@ -33,6 +33,7 @@ document.body.addEventListener('keyup', (event)=>{
 })
 elem.addEventListener('click', randomPassword)
 
+// Password Strength Check
 
 
 // Dark Light Toggle
