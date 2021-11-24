@@ -16,7 +16,6 @@ function randomPassword() {
     elem.innerText = result;
     if(!copyCheck.checked){
       console.log('Copy disabled');
-      confetti();
       passwordStrength(result);
     }else{
     copyTextToClipboard(result);
